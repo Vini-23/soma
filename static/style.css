@@ -1,0 +1,27 @@
+/* ------------------- VARIÁVEIS ------------------- */
+:root {
+    font-family: "Roboto", sans-serif;
+}
+
+/* ------------------- CONFIGS GERAIS ------------------- */
+body {
+    width: 100%;
+    background-color: gray;
+}
+
+/* ------------------- CAMPOS E BOTÕES ------------------- */
+
+
+/* ------------------- FORMULÁRIO ------------------- */
+.application {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 10%;
+}
+
+.form_camps {
+    display: flex;
+    gap: 2rem;
+}

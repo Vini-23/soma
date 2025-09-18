@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculate</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+
+<body>
+    <div class="application">
+        <h2>Bem vindo a essa pequena aplicação!</h2>
+
+        <h3>Coloque os números e selecione a operação desejada abaixo:</h3>
+
+        <form action="/" method="POST" class="form_camps">
+            <input type="number" name="number_1" required>
+            <select class="camps" name="operation" required>
+                <option value="mais">+</option>
+                <option value="menos">-</option>
+                <option value="vezes">x</option>
+                <option value="divisao">÷</option>
+            </select>
+            <input type="number" name="number_2" required>
+            <button type="submit" class="button_calculate">Calcular</button>
+        </form>
+
+        {% if result is not none %}
+            <p>O resultado do cálculo de {{ number_1}} {{operation}} {{number_2}} é igual a {{ result }}</p>
+        {% endif %}
+    </div>
+    
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <script>
+            {% for message in messages %}
+                alert("{{ message }}");
+            {% endfor %}
+            </script>
+        {% endif %}
+    {% endwith %}
+</body>
+</html>
